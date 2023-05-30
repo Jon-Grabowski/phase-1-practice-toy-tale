@@ -31,7 +31,19 @@ function buildCard(data) {
     cardDiv.className = 'card'
     const nameHeading = document.createElement( 'h2' )
     nameHeading.innerText = data[toy].name 
-    console.log(nameHeading)
+    const img = document.createElement( 'img' )
+    img.src = data[toy].image
+    img.className = ' toy-avatar '
+    const pElement = document.createElement( 'p' )
+    pElement.innerText = `${data[toy].likes} likes`
+    const button = document.createElement( 'button' )
+    button.className = "like-btn"
+    button.id = "[toy_id]"
+    button.innerText = 'Like ❤️'
+    cardDiv.append( nameHeading, img, pElement, button )
+    toyCollection.append( cardDiv )
+
+    console.log(cardDiv)
     //console.log(data[toy].name) 
   }
 }
