@@ -27,6 +27,11 @@ function getToys() {
 function buildCard(data) {
   const toyCollection = document.getElementById('toy-collection');
   for (let toy in data) {
-    console.log(data[toy].name) 
+    const cardDiv = document.createElement( 'div' )
+    cardDiv.className = 'card'
+    const nameHeading = document.createElement( 'h2' )
+    nameHeading.innerText = data[toy].name 
+    console.log(nameHeading)
+    //console.log(data[toy].name) 
   }
 }
