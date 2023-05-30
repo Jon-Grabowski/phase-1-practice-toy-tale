@@ -64,18 +64,15 @@ function buildCard(data) {
 // Handling the Submit Button and Creating New Card.
 document.querySelector('form').addEventListener('submit', handleSubmit);
 
-let idNumber = 9;
 
 function handleSubmit(e) {
   e.preventDefault();
 
   let newCard = [{
-    id: idNumber,
     name: e.target.name.value,
     image: e.target.image.value,
     likes: 0
   }]
-  idNumber++;
   //console.log(newCard)
   buildCard(newCard);
   postCard(newCard[0]);
