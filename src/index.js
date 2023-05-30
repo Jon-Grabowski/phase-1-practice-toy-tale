@@ -55,6 +55,7 @@ function buildCard(data) {
     button.addEventListener('click', (e) => {
       data[toy].likes++
       pElement.innerText = `${data[toy].likes} likes`
+      updatedLikes(data[toy])
     })
     //console.log(cardDiv)
     //console.log(data[toy].name) 
@@ -80,7 +81,7 @@ function handleSubmit(e) {
 }
 
 
-
+//Post and Patch fetches
 
 function postCard(newCard) {
   fetch('http://localhost:3000/toys', {
@@ -95,3 +96,15 @@ function postCard(newCard) {
   .then(res => res.json())
   .then(card => console.log(card))  
 }
+
+function updatedLikes(toy) {
+  fetch(`http://localhost:3000/toys/${toy.id}`, {
+    method: 'PATCH',
+    headers: 
+    {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify(toy)
+  })
+};

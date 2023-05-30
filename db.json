@@ -51,13 +51,13 @@
     {
       "name": "Jessie",
       "image": "https://m.media-amazon.com/images/I/71bgLkGjDvL.jpg",
-      "likes": 0,
+      "likes": 1,
       "id": 9
     },
     {
       "name": "Big Tracks",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlrqr8uLzxg4ndbheKz-BFkjzjai-dbKIHJITmlflT1bUMtC7hSnvjmSrY38lCWEjJjXI&usqp=CAU",
-      "likes": 0,
+      "likes": 3,
       "id": 10
     }
   ]
